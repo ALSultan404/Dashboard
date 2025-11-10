@@ -43,6 +43,16 @@ ul {
     list-style: none;
     padding: 0;
 }
+.text-title {
+    margin: 10px;
+}
+.text-title h3 {
+    margin: 0 0 10px;
+}
+.text-title p {
+    margin: 0 0 20px;
+    color: var(--grey-color);
+}
 /* Start Sidebar */
 .sidebar {
     box-shadow: 12px 0 20px rgb(0 0 0 / 8%);
@@ -115,6 +125,9 @@ ul {
 }
 /* End Sidebar */
 /* Start Header */
+.head {
+    justify-content: space-between;
+}
 .header .search form {
     border: 1px solid rgb(209 209 209);
     width: fit-content;
@@ -186,16 +199,6 @@ ul {
 .content .head {
     background-color: #f5f5f5;
 }
-.content .head .text {
-    top: -30px;
-}
-.content .head .text h3 {
-    margin: 20px 0 0 0;
-}
-.content .head .text p {
-    color: var(--grey-color);
-    margin-top: 5px;
-}
 .content .head img {
     width: 200px;
     margin-bottom: 0;
@@ -221,15 +224,9 @@ ul {
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
-.content .info .text p {
-    color: var(--grey-color);
-}
 .content .box .link {
     text-align: right;
     margin: 0 0 50px;
-}
-.content .box {
-    height: px;
 }
 .content .box .link a {
     background-color: var(--blue-color);
@@ -241,9 +238,6 @@ ul {
 }
 .content .box .link a:hover {
     background-color: var(--blue-alt-color);
-}
-.content .box .title p {
-    color: var(--grey-color);
 }
 .content .box .inputs [name="text"] {
     display: block;
@@ -263,5 +257,145 @@ ul {
     background-color: var(--blue-color);
     color: white;
     padding: 2px 10px;
+}
+.content .box .info:last-child {
+    margin-bottom: 20px;
+}
+.content .box .info .icon {
+    width: 65px;
+    text-align: center;
+}
+.content .box .info .bl {
+    background-color: #0077ff5b;
+}
+.content .box .info .bl i {
+    color: var(--blue-color);
+}
+.content .box .info .or {
+    background-color: #f59e0b5b;
+}
+.content .box .info .or i {
+    color: var(--orange-color);
+}
+.content .box .info .gr {
+    background-color: #22c55e5b;
+}
+.content .box .info .gr i {
+    color: var(--green-color);
+}
+.content .box .info .progrs-holder span:first-child {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: var(--grey-color);
+}
+.content .box .info .progrs-holder .progress {
+    width: 300px;
+    height: 3px;
+}
+.content .box .info .progrs-holder .bl span {
+    height: 3px;
+    background-color: var(--blue-color);
+}
+.content .box .info .progrs-holder .bl span::before {
+    content: attr(data-progress);
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    transform: translateX(50%);
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 6px;
+    padding: 2px 5px;
+}
+.content .box .info .progrs-holder .bl span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    transform: translateX(50%);
+    border-style: solid;
+    border-color: var(--blue-color) transparent transparent transparent;
+    border-width: 10px;
+}
+.content .box .info .progrs-holder .or span {
+    height: 3px;
+    background-color: var(--orange-color);
+}
+.content .box .info .progrs-holder .or span::before {
+    content: attr(data-progress);
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    transform: translateX(50%);
+    background-color: var(--orange-color);
+    color: white;
+    border-radius: 6px;
+    padding: 2px 5px;
+}
+.content .box .info .progrs-holder .or span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%);
+    border-style: solid;
+    border-color: var(--orange-color) transparent transparent transparent;
+    border-width: 10px;
+}
+.content .box .info .progrs-holder .gr span::before {
+    content: attr(data-progress);
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    transform: translateX(50%);
+    background-color: var(--green-color);
+    color: white;
+    border-radius: 6px;
+    padding: 2px 5px;
+}
+.content .box .info .progrs-holder .gr span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    transform: translateX(50%);
+    border-style: solid;
+    border-color: var(--green-color) transparent transparent transparent;
+    border-width: 10px;
+}
+.content .box .info .progrs-holder .gr span {
+    height: 3px;
+    background-color: var(--green-color);
+}
+.box .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.box .container .ticket {
+    text-align: center;
+    border: 1px solid #d5d5d5;
+}
+.box .container .ticket .icon i {
+    font-size: 22px;
+}
+.box .container .ticket .icon.or i {
+    color: var(--orange-color);
+}
+.box .container .ticket .icon.bl i {
+    color: var(--blue-color);
+}
+.box .container .ticket .icon.gr i {
+    color: var(--green-color);
+}
+.box .container .ticket .icon.red i {
+    color: var(--red-color);
+}
+.box .container .ticket h3 {
+    margin: 5px;
+}
+.box .container .ticket span {
+    font-size: 12px;
+    color: var(--grey-color);
 }
 /* End Content */
