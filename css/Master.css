@@ -196,27 +196,27 @@ ul {
     gap: 10px;
 }
 }
-.content .head {
+.welcome .head {
     background-color: #f5f5f5;
 }
-.content .head img {
+.welcome .head img {
     width: 200px;
     margin-bottom: 0;
 }
-.content .head .logo {
+.welcome .head .logo {
     position: absolute;
     bottom: -20px;
     left: 30px;
 }
-.content .head .logo img {
+.welcome .head .logo img {
     width: 40px;
     border: 2px solid #eee;
     border-radius: 50%;
 }
-.content .info {
+.welcome .info {
     width: 100%;
 }
-.content .info .text {
+.welcome .info .text {
     margin: 50px 10px 15px;
     justify-content: space-around;
     border-top: 1px solid #ddd;
@@ -224,11 +224,11 @@ ul {
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
-.content .box .link {
+.welcome .link {
     text-align: right;
     margin: 0 0 50px;
 }
-.content .box .link a {
+.welcome .link a {
     background-color: var(--blue-color);
     color: white;
     width: fit-content;
@@ -236,69 +236,77 @@ ul {
     margin-right: 10px;
     transition: var(--main-transtion);
 }
-.content .box .link a:hover {
+.welcome .link a:hover {
     background-color: var(--blue-alt-color);
 }
-.content .box .inputs [name="text"] {
+.draft .inputs [name="text"] {
     display: block;
-    width: 450px;
+    width: calc(100% - 35px);
     background-color: #f5f5f5;
     border: none;
 }
-.content .box .inputs textarea {
+.draft .inputs textarea {
     height: 150px;
     resize: none;
 }
-.content .box .save-a {
+.draft .save-a {
     text-align: right;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 20px 0;
 }
-.content .box .save-a a {
+.draft .save-a a {
     background-color: var(--blue-color);
     color: white;
     padding: 2px 10px;
 }
-.content .box .info:last-child {
+.targets .info:last-child {
     margin-bottom: 20px;
 }
-.content .box .info .icon {
+.targets .info .icon {
     width: 65px;
     text-align: center;
 }
-.content .box .info .bl {
+.targets .info .bl {
     background-color: #0077ff5b;
 }
-.content .box .info .bl i {
+.targets .info .bl i {
     color: var(--blue-color);
 }
-.content .box .info .or {
+.targets .info .or {
     background-color: #f59e0b5b;
 }
-.content .box .info .or i {
+.targets .info .or i {
     color: var(--orange-color);
 }
-.content .box .info .gr {
+.targets .info .gr {
     background-color: #22c55e5b;
 }
-.content .box .info .gr i {
+.targets .info .gr i {
     color: var(--green-color);
 }
-.content .box .info .progrs-holder span:first-child {
+.targets .info .progrs-holder {
+    width: calc(100% - 120px);
+}
+.targets .info .progrs-holder span:first-child {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
     font-size: 12px;
     color: var(--grey-color);
 }
-.content .box .info .progrs-holder .progress {
-    width: 300px;
+.targets .info .progrs-holder .progress {
     height: 3px;
 }
-.content .box .info .progrs-holder .bl span {
+@media (max-width: 767px) {
+    .targets .info .progrs-holder .progress span::before,
+    .targets .info .progrs-holder .progress span::after {
+        display: none;
+    }
+}
+.targets .info .progrs-holder .bl span {
     height: 3px;
     background-color: var(--blue-color);
 }
-.content .box .info .progrs-holder .bl span::before {
+.targets .info .progrs-holder .bl span::before {
     content: attr(data-progress);
     position: absolute;
     right: 0;
@@ -309,7 +317,7 @@ ul {
     border-radius: 6px;
     padding: 2px 5px;
 }
-.content .box .info .progrs-holder .bl span::after {
+.targets .info .progrs-holder .bl span::after {
     content: "";
     position: absolute;
     right: 0;
@@ -319,11 +327,11 @@ ul {
     border-color: var(--blue-color) transparent transparent transparent;
     border-width: 10px;
 }
-.content .box .info .progrs-holder .or span {
+.targets .info .progrs-holder .or span {
     height: 3px;
     background-color: var(--orange-color);
 }
-.content .box .info .progrs-holder .or span::before {
+.targets .info .progrs-holder .or span::before {
     content: attr(data-progress);
     position: absolute;
     right: 0;
@@ -334,7 +342,7 @@ ul {
     border-radius: 6px;
     padding: 2px 5px;
 }
-.content .box .info .progrs-holder .or span::after {
+.targets .info .progrs-holder .or span::after {
     content: "";
     position: absolute;
     right: 0;
@@ -344,7 +352,7 @@ ul {
     border-color: var(--orange-color) transparent transparent transparent;
     border-width: 10px;
 }
-.content .box .info .progrs-holder .gr span::before {
+.targets .info .progrs-holder .gr span::before {
     content: attr(data-progress);
     position: absolute;
     right: 0;
@@ -355,7 +363,7 @@ ul {
     border-radius: 6px;
     padding: 2px 5px;
 }
-.content .box .info .progrs-holder .gr span::after {
+.targets .info .progrs-holder .gr span::after {
     content: "";
     position: absolute;
     right: 0;
@@ -365,36 +373,36 @@ ul {
     border-color: var(--green-color) transparent transparent transparent;
     border-width: 10px;
 }
-.content .box .info .progrs-holder .gr span {
+.targets .info .progrs-holder .gr span {
     height: 3px;
     background-color: var(--green-color);
 }
-.box .container {
+.stats .container {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
-.box .container .ticket {
+.stats .container .ticket {
     text-align: center;
     border: 1px solid #d5d5d5;
 }
-.box .container .ticket .icon i {
+.stats .container .ticket .icon i {
     font-size: 22px;
 }
-.box .container .ticket .icon.or i {
+.stats .container .ticket .icon.or i {
     color: var(--orange-color);
 }
-.box .container .ticket .icon.bl i {
+.stats .container .ticket .icon.bl i {
     color: var(--blue-color);
 }
-.box .container .ticket .icon.gr i {
+.stats .container .ticket .icon.gr i {
     color: var(--green-color);
 }
-.box .container .ticket .icon.red i {
+.stats .container .ticket .icon.red i {
     color: var(--red-color);
 }
-.box .container .ticket h3 {
+.stats .container .ticket h3 {
     margin: 5px;
 }
-.box .container .ticket span {
+.stats .container .ticket span {
     font-size: 12px;
     color: var(--grey-color);
 }
