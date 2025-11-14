@@ -13,11 +13,17 @@
 .align-center {
     align-items: center;
 }
+.justify-center {
+    justify-content: center;
+}
 .d-grid {
     display: grid;
 }
 .gap-20 {
     gap: 20px;
+}
+.d-block {
+    display: block;
 }
 @media (max-width: 767px) {
     .block-mobile {
@@ -32,33 +38,96 @@
 .p-10 {
     padding: 10px;
 }
+.p-7 {
+    padding: 7px;
+}
 .m-20 {
     margin: 20px;
 }
 .m-10 { 
     margin: 10px;
 }
+.m-5 {
+    margin: 5px;
+}
 .m-15 {
     margin: 15px;
+}
+.m-0 {
+    margin: 0;
 }
 .mt-0 {
     margin-top: 0;
 }
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-15 {
+    margin-right: 15px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
 .ml-15 {
     margin-left: 15px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.mrl-15 {
+    margin: 0 15px;
 }
 /* End Padding + Margin */
 /* Start Width */
 .w-full {
     width: 100%;
 }
+.w-full-30 {
+    width: calc(100% - 30px);
+}
+.ft-cont {
+    width: fit-content;
+}
 /* End Width */
 /* Start Color */
 .bg-white {
     background-color: white;
 }
+.bg-blue {
+    background-color: var(--blue-color);
+}
+.bg-eee {
+    background-color: #eee;
+}
 .c-black {
     color: black;
+}
+.c-grey {
+    color: var(--grey-color);
+}
+.c-white {
+    color: white;
 }
 /* End Color */
 /* Start Position */
@@ -73,6 +142,18 @@
 .fs-14 {
     font-size: 14px;
 }
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-22 {
+    font-size: 22px;
+}
+.fw-n {
+    font-weight: normal;
+}
 @media (max-width: 767px) {
     .txt-c-mobile {
         text-align: center;
@@ -83,11 +164,23 @@
 .rad-6 {
     border-radius: 6px;
 }
+.rad-50 {
+    border-radius: 50%;
+}
+.bt-d5 {
+    border-top: 1px solid #eee;
+}
 /* End Border */
 /* Start Components */
 .between-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.transshn {
+    transition: 0.3s;
+}
+.a-p {
+    padding: 2px 10px;
 }
 /* End Components */
